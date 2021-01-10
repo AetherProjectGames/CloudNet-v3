@@ -59,7 +59,8 @@ public final class CloudNetBridgeModule extends NodeCloudNetModule {
                 new ArrayList<>(),
                 new ArrayList<>(),
                 DEFAULT_MESSAGES,
-                true
+                true,
+                false
         ));
 
         if (this.bridgeConfiguration.getMessages() != null) {

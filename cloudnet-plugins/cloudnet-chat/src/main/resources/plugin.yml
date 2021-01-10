@@ -1,6 +1,0 @@
-name: CloudNet-Chat
-version: "1.0"
-api-version: "1.13"
-author: CloudNetService
-
-main: de.dytanic.cloudnet.ext.chat.CloudNetChatPlugin

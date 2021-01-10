@@ -42,6 +42,6 @@ public final class CommandHub extends Command {
 
     @Override
     public String[] getAliases() {
-        return new String[]{"lobby", "l", "leave"};
+        return new String[]{"leave"};
     }
 }

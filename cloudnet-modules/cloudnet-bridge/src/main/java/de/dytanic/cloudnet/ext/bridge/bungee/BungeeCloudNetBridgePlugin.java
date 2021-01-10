@@ -3,6 +3,7 @@ package de.dytanic.cloudnet.ext.bridge.bungee;
 import de.dytanic.cloudnet.driver.CloudNetDriver;
 import de.dytanic.cloudnet.driver.service.ServiceInfoSnapshot;
 import de.dytanic.cloudnet.driver.service.ServiceLifeCycle;
+import de.dytanic.cloudnet.ext.bridge.BridgeConfigurationProvider;
 import de.dytanic.cloudnet.ext.bridge.BridgeHelper;
 import de.dytanic.cloudnet.ext.bridge.BridgePlayerManager;
 import de.dytanic.cloudnet.ext.bridge.bungee.command.CommandCloudNet;
@@ -76,7 +77,9 @@ public final class BungeeCloudNetBridgePlugin extends Plugin {
 
     private void registerCommands() {
         ProxyServer.getInstance().getPluginManager().registerCommand(this, new CommandCloudNet());
-        ProxyServer.getInstance().getPluginManager().registerCommand(this, new CommandHub());
+        if(BridgeConfigurationProvider.load().isEnableLobbySystem()) {
+            ProxyServer.getInstance().getPluginManager().registerCommand(this, new CommandHub());
+        }
     }
 
     private void initListeners() {

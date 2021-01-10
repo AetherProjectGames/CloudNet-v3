@@ -1,7 +1,0 @@
-jar {
-    archiveFileName.set(cloudnetModuleReportFileName)
-}
-
-dependencies {
-    compileOnly project(':cloudnet')
-}

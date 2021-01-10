@@ -23,15 +23,17 @@ public final class BridgeConfiguration extends BasicJsonDocPropertyable {
     private Collection<ProxyFallbackConfiguration> bungeeFallbackConfigurations;
     private Map<String, String> messages;
     private boolean logPlayerConnections = true;
+    private boolean enableLobbySystem = false;
 
     public BridgeConfiguration(String prefix, boolean onlyProxyProtection, Collection<String> excludedOnlyProxyWalkableGroups, Collection<String> excludedGroups,
-                               Collection<ProxyFallbackConfiguration> bungeeFallbackConfigurations, Map<String, String> messages, boolean logPlayerConnections) {
+                               Collection<ProxyFallbackConfiguration> bungeeFallbackConfigurations, Map<String, String> messages, boolean logPlayerConnections, boolean enableLobbySystem) {
         this.prefix = prefix;
         this.onlyProxyProtection = onlyProxyProtection;
         this.excludedOnlyProxyWalkableGroups = excludedOnlyProxyWalkableGroups;
         this.excludedGroups = excludedGroups;
         this.bungeeFallbackConfigurations = bungeeFallbackConfigurations;
         this.messages = messages;
+        this.enableLobbySystem = enableLobbySystem;
     }
 
     public BridgeConfiguration() {
@@ -93,4 +95,11 @@ public final class BridgeConfiguration extends BasicJsonDocPropertyable {
         this.logPlayerConnections = logPlayerConnections;
     }
 
+    public boolean isEnableLobbySystem() {
+        return enableLobbySystem;
+    }
+
+    public void setEnableLobbySystem(boolean enableLobbySystem) {
+        this.enableLobbySystem = enableLobbySystem;
+    }
 }
