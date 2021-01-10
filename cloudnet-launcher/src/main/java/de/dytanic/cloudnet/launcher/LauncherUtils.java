@@ -20,14 +20,10 @@ public final class LauncherUtils {
 
     public static final List<CloudNetModule> DEFAULT_MODULES = Arrays.asList(
             new CloudNetModule("cloudnet-bridge", "cloudnet-bridge.jar"),
-            new CloudNetModule("cloudnet-signs", "cloudnet-signs.jar"),
-            new CloudNetModule("cloudnet-npcs", "cloudnet-npcs.jar"),
             new CloudNetModule("cloudnet-syncproxy", "cloudnet-syncproxy.jar"),
             new CloudNetModule("cloudnet-cloudflare", "cloudnet-cloudflare.jar"),
-            new CloudNetModule("cloudnet-report", "cloudnet-report.jar"),
             new CloudNetModule("cloudnet-rest", "cloudnet-rest.jar"),
             new CloudNetModule("cloudnet-smart", "cloudnet-smart.jar"),
-            new CloudNetModule("cloudnet-cloudperms", "cloudnet-cloudperms.jar"),
             new CloudNetModule("cloudnet-storage-ftp", "cloudnet-storage-ftp.jar"),
             new CloudNetModule("cloudnet-database-mysql", "cloudnet-database-mysql.jar")
     );
